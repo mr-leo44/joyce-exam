@@ -4,18 +4,6 @@ if(!isset($_SESSION['user'])){
   header('Location: connexion.html');
   exit;
 } 
-
-if ($_SERVER["REQUEST_METHOD"] === "POST"){
-    //Recuperation des valeurs du formulaire
-    $logout= $_POST['logout'];
-    if($logout) {
-        session_destroy();
-        header('Location: connexion.html');
-        exit;
-    }
-    // var_dump($_POST['logout']);
-    // die();
-}
 ?>
 
 <!DOCTYPE html>
@@ -31,8 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST"){
     <nav>
       <ul>
         <li>
-          <form class="form" action="dashboard.php" method="POST">
-            <input type="hidden" name="logout" value="logout">
+          <form class="form" action="logout.php" method="POST">
             <button type="submit">Deconnexion</button>
           </form>
         </li>

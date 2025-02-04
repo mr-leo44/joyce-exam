@@ -18,7 +18,7 @@ if (!isset($_SESSION['user'])) {
   <header>
     <nav>
       <ul>
-        <li><a href="dashboard.php">Dashboard</a></li>
+        <li><a href="logout.php">Dashboard</a></li>
         <li>
           <form class="form" action="dashboard.php" method="POST">
             <input type="hidden" name="logout" value="logout">
