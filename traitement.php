@@ -7,7 +7,10 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
 
   if (empty($nom) || empty($email) || empty($motdepasse)) {
     echo"Tous les champs sont obligatoires.";
-  } 
+  } else {
+    // Hacher le mot de passe
+    $motdepasseHache= password_hash($motdepasse, PASSWORD_BCRYPT);
+  }
 
   // Ajouter l'utilisateur au fichier
   $userInfo="Nom: $nom |  Email: $email |  Password: $motdepasseHache\n";
