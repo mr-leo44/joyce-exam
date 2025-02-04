@@ -46,5 +46,5 @@ if ($_SERVER["REQUEST_METHOD"] === "POST"){
   <footer>
     <p>&copy;2025 Tous droits réservés.</p>
   </footer>
-  </body>
+</body>
 </html>
