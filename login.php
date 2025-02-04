@@ -19,6 +19,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST"){
   }
   if (!empty($userData)){
     echo $message = "Bienvenue ".$userData[0];
+
+    $_SESSION['user'] = $userData;
+    header('Location: dashboard.php');
+    exit;
   } else {
     echo $message = "Email ou mot de passe incorrect";
   }
