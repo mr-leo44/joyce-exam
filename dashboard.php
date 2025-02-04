@@ -27,17 +27,17 @@ if ($_SERVER["REQUEST_METHOD"] === "POST"){
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-  <nav>
-    <ul>
-      <li>
-        <form class="form" action="dashboard.php" method="POST">
-          <input type="hidden" name="logout" value="logout">
-          <button type="submit">Deconnexion</button>
-        </form>
-      </li>
-    </ul>
-  </nav>
+  <header>
+    <nav>
+      <ul>
+        <li>
+          <form class="form" action="dashboard.php" method="POST">
+            <input type="hidden" name="logout" value="logout">
+            <button type="submit">Deconnexion</button>
+          </form>
+        </li>
+      </ul>
+    </nav>
   </header>
   <main>
     <h1><?= "Bienvenue " . $_SESSION['user'][0] ?></h1>
