@@ -1,4 +1,10 @@
 <?php
+session_start();
+if(isset($_SESSION['user'])){
+  header('Location: dashboard.php');
+  exit;
+}
+
 if ($_SERVER["REQUEST_METHOD"] === "POST"){
   //Recuperation des valeurs du formulaire
   $email= $_POST['email'];
